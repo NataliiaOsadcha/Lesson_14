@@ -1,0 +1,233 @@
+@import url(reset.css);
+body {
+    font-family: 'Roboto';
+    position: relative;
+}
+
+label{
+    cursor: pointer;
+}
+ 
+.main_color_text{
+    color: #FFFFFF;
+}
+
+.accent_color_text{
+    color: #153416;
+}
+
+.main_text_fz{
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+}
+
+.wrapper{
+    min-height: 100vh;
+    background: url(../img/background.webp) no-repeat 50%/ cover;
+    object-fit: cover;
+    /* transition: all 2s ease; */
+    animation: skale 60s infinite;
+}
+
+.wrapper::before {
+    content: '';
+    background: rgba(16, 15, 15, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.wrapper::after {
+    content: '';
+    background: rgba(233, 233, 233, 0.25);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    position: absolute;
+    width: 496px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+
+@keyframes skale {
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.left_form{
+    position: absolute;
+    width: 496px;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 15;
+}
+
+.box_for_form{
+    width: 340px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.registration_block_switch{
+    padding: 60px 0 75px 0;
+}
+
+.registration_block_switch input{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.registration_block_switch input + label {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 36px;
+    border: 1px solid #153416;
+    border-radius: 30px;
+    position: relative;
+}
+
+.registration_block_switch input + label::before{
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 50%;
+    height: 32px;
+    background: #153416;
+    border-radius: 30px;
+    transition: all .3s linear;
+}
+
+.registration_block_switch input:checked + label::before{
+    transform: translateX(99%);
+}
+
+.registration_block_switch input + label span {
+    flex: 0 0 50%;
+    position: relative;
+}
+
+
+
+.h2_in{
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.input_form{
+    width: 100%;
+    height: 44px;
+    padding: 15px 20px;
+    background: #929191;
+    border: none;
+    border-radius: 30px;
+}
+
+.input_form::placeholder {
+    color: #FFFFFF;
+
+}
+form > input + input {
+    margin-top: 15px;
+}
+
+/* checkbox */
+
+.custom_checkbox input{
+    /* правильное скрытие */
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom_checkbox input + label {
+    padding: 5px 5px 5px 25px;
+    display: inline-block;
+    position: relative;
+
+}
+
+.custom_checkbox input + label::before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #D9D9D9;
+    border-radius: 2px;
+}
+
+.custom_checkbox input:checked + label::before {
+    background: #153416;
+    border: none;
+}
+
+.custom_checkbox input:checked + label::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 5px;
+    height: 10px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: rotate(40deg);
+}
+
+
+/* .password_remember > a {
+    text-decoration: none;
+    text-decoration-line: underline;
+} */
+
+.password_remember{
+    margin: 20px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.enter_button{
+    width: 100%;
+    padding: 15px 0  15px 0;
+    background: #153416;
+    border-radius: 30px;
+    border: none;
+}
+
+.registration_link{
+    width: 237px;
+    margin: 40px auto 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon{
+    height: 24px;
+    fill: #153416;
+}
+
+.menu_icons{
+    width: 104px;
+    margin: 0 auto;
+    padding: 20px 0 60px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
